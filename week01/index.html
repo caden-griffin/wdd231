@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231: Course Home Page</title>
+    <meta name="description" content="Home page for WDD 231 -Web Frontend Development">
+    <meta name="author" content="Caden Griffin">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/house.svg" alt="Image of House" width="40" height="40">
+            <span>Caden's Home Page</span>
+        </div>
+        <button id="menu" aria-label="Toggle Menu">☰</button>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Chamber Project</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <div class="grid-container">
+            <section class="card about-card">
+                <h2>About Me</h2>
+                <p>My name is Caden Griffin and I am a student pursuing a bachelors degree in software development. I am glad I have the opportunity to learn and improve my skills.</p>
+            </section>
+
+            <section class="card photo-card">
+                <h2>Student Photo</h2>
+                <div class="photo-placeholder">
+                    <img src="images/cadengriffinpicture.webp" alt="Student Profile Picture">
+                </div>
+            </section>
+
+            <section class="card certificate-card">
+                <h2>Web Certificate Courses</h2>
+                <div class="filters">
+                    <button id="all" class="filter-btn active">ALL</button>
+                    <button id="cse" class="filter-btn">CSE</button>
+                    <button id="wdd" class="filter-btn">WDD</button>
+                </div>
+                <div id="course-container"></div>
+                <p class="total-credits">The total credits for courses listed above is <span id="credits">0</span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>&copy;<span id="currentyear"></span>• Caden Griffin • Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
