@@ -1,7 +1,8 @@
+
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
 }
 
@@ -14,16 +15,15 @@ nav {
 }
 
 #nav-menu {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 #nav-menu li a {
     border-bottom: none;
-    border-radius: 4px;
     padding: 0.5rem 1rem;
-    transition: background-color 0.2s ease;
+    border-radius: 4px;
 }
 
 .grid-view {
@@ -32,34 +32,26 @@ nav {
 
 .list-view section {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 0.75rem 1.5rem;
 }
 
-.list-view section:nth-child(even) {
-    background-color: var(--accent-silver);
-}
-
 .list-view section h3 {
-    flex: 1 1 25%;
     margin: 0;
+    flex: 1;
 }
 
 .list-view .tagline {
-    flex: 1 1 20%;
     margin: 0;
+    flex: 1;
 }
 
 .list-view .info-group {
-    flex: 2 1 55%;
     flex-direction: row;
-    justify-content: space-between;
     gap: 1rem;
-}
-
-.list-view .info-group p {
-    margin: 0;
+    flex: 2;
+    justify-content: flex-end;
 }
 
 footer {
