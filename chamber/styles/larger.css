@@ -1,70 +1,71 @@
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-}
+    #menu-button {
+        display: none;
+    }
 
-#menu-button {
-    display: none;
-}
+    nav {
+        margin-top: 0;
+    }
 
-nav {
-    margin-top: 0;
-}
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 
-#nav-menu {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
+    #nav-menu li a {
+        border-bottom: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
 
-#nav-menu li a {
-    border-bottom: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-}
+    .grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
-.grid-view {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
+    .list-view section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+    }
 
-.list-view section {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1.5rem;
-}
+    .list-view section h3 {
+        margin: 0;
+        flex: 1;
+    }
 
-.list-view section h3 {
-    margin: 0;
-    flex: 1;
-}
+    .list-view .tagline {
+        margin: 0;
+        flex: 1;
+    }
 
-.list-view .tagline {
-    margin: 0;
-    flex: 1;
-}
+    .list-view .info-group {
+        flex-direction: row;
+        gap: 1rem;
+        flex: 2;
+        justify-content: flex-end;
+    }
 
-.list-view .info-group {
-    flex-direction: row;
-    gap: 1rem;
-    flex: 2;
-    justify-content: flex-end;
-}
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 2rem;
+    }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    padding: 2rem;
-}
-
-.footer-meta {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-    text-align: right;
+    .footer-meta {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        text-align: right;
+    }
 }
