@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Salem Tech Solutions",
+      "address": "456 North Main St, Salem, UT 84653",
+      "phone": "(801) 555-0101",
+      "website": "https://example.com/salemtech",
+      "image": "salem-tech.png",
+      "membershipLevel": 3,
+      "category": "Technology"
+    },
+    {
+      "name": "Valley Bakery & Cafe",
+      "address": "789 South State Rd, Salem, UT 84653",
+      "phone": "(801) 555-0102",
+      "website": "https://example.com/valleybakery",
+      "image": "valley-bakery.png",
+      "membershipLevel": 2,
+      "category": "Food & Beverage"
+    },
+    {
+      "name": "Summit Web Development",
+      "address": "122 East Pond Ln, Salem, UT 84653",
+      "phone": "(801) 555-0103",
+      "website": "https://example.com/summitweb",
+      "image": "summit-web.png",
+      "membershipLevel": 3,
+      "category": "Technology"
+    },
+    {
+      "name": "Pioneer Auto Repair",
+      "address": "340 West Arrowhead Dr, Salem, UT 84653",
+      "phone": "(801) 555-0104",
+      "website": "https://example.com/pioneerauto",
+      "image": "pioneer-auto.png",
+      "membershipLevel": 1,
+      "category": "Automotive"
+    },
+    {
+      "name": "Canyon View Insurance",
+      "address": "555 Elite Parkway, Spanish Fork, UT 84660",
+      "phone": "(801) 555-0105",
+      "website": "https://example.com/canyonview",
+      "image": "canyon-insurance.png",
+      "membershipLevel": 2,
+      "category": "Finance & Insurance"
+    },
+    {
+      "name": "Maple Creek Dental",
+      "address": "890 East Woodland Way, Salem, UT 84653",
+      "phone": "(801) 555-0106",
+      "website": "https://example.com/maplecreek",
+      "image": "maple-dental.png",
+      "membershipLevel": 3,
+      "category": "Health & Medical"
+    },
+    {
+      "name": "Redstone Craft Supplies",
+      "address": "111 Innovation Block, Payson, UT 84651",
+      "phone": "(801) 555-0107",
+      "website": "https://example.com/redstonecraft",
+      "image": "redstone-craft.png",
+      "membershipLevel": 1,
+      "category": "Retail & Crafts"
+    }
+  ]
+}
