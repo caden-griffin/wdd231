@@ -1,67 +1,63 @@
-const jsonPath = 'data/members.json';
-const container = document.getElementById('directory-container');
-const gridBtn = document.getElementById('grid-btn');
-const listBtn = document.getElementById('list-btn');
-const menuButton = document.getElementById('menu-button');
-const navMenu = document.getElementById('nav-menu');
+const menuButton = document.querySelector('#menu-button');
+const navMenu = document.querySelector('#nav-menu');
 
 menuButton.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    menuButton.classList.toggle('open');
+    navMenu.classList.toggle('show');
+    menuButton.textContent = navMenu.classList.contains('show') ? '✕' : '☰';
 });
 
 document.getElementById('current-year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
 
-async function fetchMembers() {
+const directoryContainer = document.querySelector('#directory-container');
+const gridBtn = document.querySelector('#grid-btn');
+const listBtn = document.querySelector('#list-btn');
+const membersUrl = 'data/members.json';
+
+async function getDirectoryData() {
     try {
-        const response = await fetch(jsonPath);
-        if (!response.ok) {
-            throw new Error('Network response failure');
-        }
+        const response = await fetch(membersUrl);
         const data = await response.json();
-        displayMembers(data.members);
+        displayDirectory(data.members);
     } catch (error) {
-        console.error('Error processing member data:', error);
+        console.error(error);
     }
 }
 
-function displayMembers(members) {
-    container.innerHTML = '';
-    
+function displayDirectory(members) {
+    directoryContainer.innerHTML = '';
+
     members.forEach(member => {
         const card = document.createElement('section');
-        
-        let levelText = 'Member';
-        if (member.membershipLevel === 2) levelText = 'Silver';
-        if (member.membershipLevel === 3) levelText = 'Gold';
-        
+        card.classList.add('member-card');
+
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
-            <h3>${member.name}</h3>
-            <p class="tagline">${member.category} - <span class="lvl-${member.membershipLevel}">${levelText}</span></p>
-            <div class="info-group">
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
+            <img src="images/${member.image}" alt="${member.name} Logo" loading="lazy">
+            <div class="member-info">
+                <h3>${member.name}</h3>
+                <p class="member-tagline">${member.category} - ${member.membershipLevel === 3 ? 'Gold' : member.membershipLevel === 2 ? 'Silver' : 'Member'}</p>
+                <p><strong>ADDRESS:</strong> ${member.address}</p>
+                <p><strong>PHONE:</strong> ${member.phone}</p>
+                <p><strong>URL:</strong> <a href="${member.website}" target="_blank">Visit Website</a></p>
             </div>
         `;
-        container.appendChild(card);
+
+        directoryContainer.appendChild(card);
     });
 }
 
 gridBtn.addEventListener('click', () => {
-    container.classList.add('grid-view');
-    container.classList.remove('list-view');
+    directoryContainer.classList.add('grid-view');
+    directoryContainer.classList.remove('list-view');
     gridBtn.classList.add('active');
     listBtn.classList.remove('active');
 });
 
 listBtn.addEventListener('click', () => {
-    container.classList.add('list-view');
-    container.classList.remove('grid-view');
+    directoryContainer.classList.add('list-view');
+    directoryContainer.classList.remove('grid-view');
     listBtn.classList.add('active');
     gridBtn.classList.remove('active');
 });
 
-fetchMembers();
+getDirectoryData();

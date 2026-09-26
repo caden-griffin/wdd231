@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Home</title>
+    <meta name="description" content="Home page for the local Chamber of Commerce. Explore current events, weather, and business spotlights.">
+    <meta name="author" content="Caden Griffin">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <meta property="og:title" content="Chamber of Commerce - Home Page">
+    <meta property="og:description" content="Welcome to the Chamber of Commerce home page.">
+    <meta property="og:image" content="https://caden-griffin.github.io/wdd231/chamber/images/og-share.jpg">
+    <meta property="og:url" content="https://caden-griffin.github.io/wdd231/chamber/index.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
+
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/flag.png" alt="Utah Flag Logo" class="logo">
+            <div class="title-area">
+                <p class="header-site-title">Utah Valley Chamber</p>
+                <span>Community & Commerce</span>
+            </div>
+        </div>
+        <button id="menu-button" aria-label="Toggle Menu">&#9776;</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Utah Valley Landscape" class="hero-image">
+            <div class="hero-cta">
+                <h2>Empowering Local Business</h2>
+                <p>Join the Utah Valley Chamber today and connect with community leaders.</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="card events-card">
+                <h2>Current Events</h2>
+                <div class="card-content">
+                    <p><strong>Utah Valley Business Luncheon:</strong> Networking event this Thursday at 12:00 PM at the Salem Community Center.</p>
+                    <p><strong>Annual Small Business Expo:</strong> Vendor registration is now officially open for next month's downtown showcase.</p>
+                </div>
+            </section>
+
+            <section class="card weather-card">
+                <h2>Weather</h2>
+                <div class="card-content">
+                    <div id="current-weather">
+                        <img id="weather-icon" src="" alt="Weather Condition Icon">
+                        <div>
+                            <p class="temperature"><span id="current-temp">--</span>&deg;F</p>
+                            <p id="weather-desc">Loading weather...</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="forecast-container"></div>
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlights-container">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights" class="spotlights-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h2>Utah Valley Chamber</h2>
+            <p>123 Commerce Way, Salem, UT 84653</p>
+            <p>info@uvchamber.org | (801) 555-0199</p>
+        </div>
+        <div class="footer-meta">
+            <p>&copy; <span id="current-year"></span> | Caden Griffin | WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

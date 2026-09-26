@@ -4,27 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber of Commerce - Directory</title>
-    <meta name="description" content="Business directory page for the local Chamber of Commerce. Explore and support our community businesses.">
-    <meta name="author" content="Caden Barnett Griffin">
+    <meta name="description" content="Business directory page for the local Chamber of Commerce.">
+    <meta name="author" content="Caden Griffin">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Chamber of Commerce - Directory Website Page">
-    <meta property="og:description" content="Explore local businesses and chamber members in our comprehensive directory. You can choose to toggle between grid and list views.">
-    <meta property="og:image" content="https://caden-griffin.github.io/wdd231/chamber/images/og-share.jpg">
-    <meta property="og:url" content="https://caden-griffin.github.io/wdd231/chamber/directory.html">
-    
-    <!-- Google Fonts API Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
 
-    <!-- Defer Script Placement Fix -->
     <script src="scripts/directory.js" defer></script>
 </head>
 <body>
@@ -32,7 +23,6 @@
         <div class="header-container">
             <img src="images/flag.png" alt="Utah Flag Logo" class="logo">
             <div class="title-area">
-                <!-- Kept your header branding clear -->
                 <p class="header-site-title">Utah Valley Chamber</p>
                 <span>Community & Commerce</span>
             </div>
@@ -49,7 +39,6 @@
     </header>
 
     <main>
-        <!-- HTML Validation Fix: The single h1 element must live inside main -->
         <h1>Chamber of Commerce - Directory</h1>
 
         <div class="directory-controls">
@@ -57,7 +46,6 @@
             <button id="list-btn" aria-label="List View">List View</button>
         </div>
         <article id="directory-container" class="grid-view">
-            <h2>Member Directory List</h2>
         </article>
     </main>
 
@@ -68,7 +56,7 @@
             <p>info@uvchamber.org | (801) 555-0199</p>
         </div>
         <div class="footer-meta">
-            <p>&copy; <span id="current-year"></span> | Caden Barnett Griffin | WDD 231</p>
+            <p>&copy; <span id="current-year"></span> | Caden Griffin | WDD 231</p>
             <p>Last Modified: <span id="last-modified"></span></p>
         </div>
     </footer>
