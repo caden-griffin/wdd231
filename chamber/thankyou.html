@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Application Submitted</title>
+    <meta name="description" content="Thank you page for the Utah Valley Chamber of Commerce membership application.">
+    <meta name="author" content="Caden Griffin">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
+
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/flag.jpg" alt="Utah Flag Logo" class="logo">
+            <div class="title-area">
+                <p class="header-site-title">Utah Valley Chamber</p>
+                <span>Community & Commerce</span>
+            </div>
+        </div>
+        <button id="menu-button" aria-label="Toggle Menu">&#9776;</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-main">
+        <h1>Thank You for Your Application!</h1>
+        <p>We have received your application and will review it shortly. Here are the details you submitted:</p>
+
+        <div id="results" class="results-card"></div>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h2>Utah Valley Chamber</h2>
+            <p>123 Commerce Way, Salem, UT 84653</p>
+            <p>info@uvchamber.org | (801) 555-0199</p>
+        </div>
+        <div class="footer-meta">
+            <p>&copy; <span id="current-year"></span> | Caden Griffin | WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

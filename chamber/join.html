@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Join</title>
+    <meta name="description" content="Membership application page for the Utah Valley Chamber of Commerce.">
+    <meta name="author" content="Caden Griffin">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/flag.jpg" alt="Utah Flag Logo" class="logo">
+            <div class="title-area">
+                <p class="header-site-title">Utah Valley Chamber</p>
+                <span>Community & Commerce</span>
+            </div>
+        </div>
+        <button id="menu-button" aria-label="Toggle Menu">&#9776;</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Membership Application</h1>
+
+        <div class="join-grid">
+            <form method="get" action="thankyou.html" class="join-form">
+                <fieldset>
+                    <legend>Applicant Personal Information</legend>
+                    
+                    <label>First Name *
+                        <input type="text" name="fname" title="Enter your first name" autocomplete="given-name" required>
+                    </label>
+
+                    <label>Last Name *
+                        <input type="text" name="lname" title="Enter your last name" autocomplete="family-name" required>
+                    </label>
+
+                    <label>Organizational Title
+                        <input type="text" name="title" title="Enter your organizational title (at least 7 alpha characters, hyphens, and spaces)" autocomplete="organization-title" pattern="[a-zA-Z\-\s]{7,}">
+                    </label>
+
+                    <label>Email Address *
+                        <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@domain.com" required>
+                    </label>
+
+                    <label>Mobile Phone Number *
+                        <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+                    
+                    <label>Business/Organization Name *
+                        <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <label>Membership Level *
+                        <select name="membership" id="membership" title="Select your membership level" required>
+                            <option value="" disabled selected>Select a Membership Level</option>
+                            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>Business/Organization Description
+                        <textarea name="description" title="Provide a brief description of your business" rows="4"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+                </fieldset>
+
+                <input type="submit" value="Join the Chamber" class="submit-btn">
+            </form>
+
+            <section class="membership-cards-container">
+                <h2>Membership Levels</h2>
+                
+                <div class="card membership-card">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations.</p>
+                    <button type="button" onclick="document.getElementById('modal-np').showModal()">View Benefits</button>
+                </div>
+
+                <div class="card membership-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Starter level for small businesses.</p>
+                    <button type="button" onclick="document.getElementById('modal-bronze').showModal()">View Benefits</button>
+                </div>
+
+                <div class="card membership-card">
+                    <h3>Silver Membership</h3>
+                    <p>Enhanced exposure and event perks.</p>
+                    <button type="button" onclick="document.getElementById('modal-silver').showModal()">View Benefits</button>
+                </div>
+
+                <div class="card membership-card">
+                    <h3>Gold Membership</h3>
+                    <p>Maximum visibility and VIP spotlights.</p>
+                    <button type="button" onclick="document.getElementById('modal-gold').showModal()">View Benefits</button>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="modal-np">
+            <h3>Non-Profit Membership Benefits</h3>
+            <p>No fee required. Includes basic directory listing and community event announcements.</p>
+            <button onclick="document.getElementById('modal-np').close()">Close</button>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <h3>Bronze Membership Benefits</h3>
+            <p>Includes standard directory listing, newsletter mentions, and discounts on monthly luncheons.</p>
+            <button onclick="document.getElementById('modal-bronze').close()">Close</button>
+        </dialog>
+
+        <dialog id="modal-silver">
+            <h3>Silver Membership Benefits</h3>
+            <p>Includes featured directory placement, event sponsorship opportunities, and social media spotlight posts.</p>
+            <button onclick="document.getElementById('modal-silver').close()">Close</button>
+        </dialog>
+
+        <dialog id="modal-gold">
+            <h3>Gold Membership Benefits</h3>
+            <p>Includes homepage spotlight position, VIP access to annual galas, free training workshops, and premium advocacy.</p>
+            <button onclick="document.getElementById('modal-gold').close()">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h2>Utah Valley Chamber</h2>
+            <p>123 Commerce Way, Salem, UT 84653</p>
+            <p>info@uvchamber.org | (801) 555-0199</p>
+        </div>
+        <div class="footer-meta">
+            <p>&copy; <span id="current-year"></span> | Caden Griffin | WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
