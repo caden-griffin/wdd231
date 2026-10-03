@@ -100,25 +100,25 @@
                 <div class="card membership-card">
                     <h3>NP Membership</h3>
                     <p>For non-profit organizations.</p>
-                    <button type="button" onclick="document.getElementById('modal-np').showModal()">View Benefits</button>
+                    <button type="button" class="modal-btn" data-modal="modal-np">View Benefits</button>
                 </div>
 
                 <div class="card membership-card">
                     <h3>Bronze Membership</h3>
                     <p>Starter level for small businesses.</p>
-                    <button type="button" onclick="document.getElementById('modal-bronze').showModal()">View Benefits</button>
+                    <button type="button" class="modal-btn" data-modal="modal-bronze">View Benefits</button>
                 </div>
 
                 <div class="card membership-card">
                     <h3>Silver Membership</h3>
                     <p>Enhanced exposure and event perks.</p>
-                    <button type="button" onclick="document.getElementById('modal-silver').showModal()">View Benefits</button>
+                    <button type="button" class="modal-btn" data-modal="modal-silver">View Benefits</button>
                 </div>
 
                 <div class="card membership-card">
                     <h3>Gold Membership</h3>
                     <p>Maximum visibility and VIP spotlights.</p>
-                    <button type="button" onclick="document.getElementById('modal-gold').showModal()">View Benefits</button>
+                    <button type="button" class="modal-btn" data-modal="modal-gold">View Benefits</button>
                 </div>
             </section>
         </div>
@@ -126,25 +126,25 @@
         <dialog id="modal-np">
             <h3>Non-Profit Membership Benefits</h3>
             <p>No fee required. Includes basic directory listing and community event announcements.</p>
-            <button onclick="document.getElementById('modal-np').close()">Close</button>
+            <button type="button" class="close-modal" data-modal="modal-np">Close</button>
         </dialog>
 
         <dialog id="modal-bronze">
             <h3>Bronze Membership Benefits</h3>
             <p>Includes standard directory listing, newsletter mentions, and discounts on monthly luncheons.</p>
-            <button onclick="document.getElementById('modal-bronze').close()">Close</button>
+            <button type="button" class="close-modal" data-modal="modal-bronze">Close</button>
         </dialog>
 
         <dialog id="modal-silver">
             <h3>Silver Membership Benefits</h3>
             <p>Includes featured directory placement, event sponsorship opportunities, and social media spotlight posts.</p>
-            <button onclick="document.getElementById('modal-silver').close()">Close</button>
+            <button type="button" class="close-modal" data-modal="modal-silver">Close</button>
         </dialog>
 
         <dialog id="modal-gold">
             <h3>Gold Membership Benefits</h3>
             <p>Includes homepage spotlight position, VIP access to annual galas, free training workshops, and premium advocacy.</p>
-            <button onclick="document.getElementById('modal-gold').close()">Close</button>
+            <button type="button" class="close-modal" data-modal="modal-gold">Close</button>
         </dialog>
     </main>
 
