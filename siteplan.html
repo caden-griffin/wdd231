@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Bite Finder - Site Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #D9534F;
+            --secondary-color: #F0AD4E;
+            --bg-color: #F9F9F9;
+            --text-color: #333333;
+            --card-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        header, main, footer {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .primary-box { background-color: var(--primary-color); }
+        .secondary-box { background-color: var(--secondary-color); }
+        .bg-box { background-color: var(--bg-color); }
+        .text-box { background-color: var(--text-color); }
+
+        .wireframe-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .wireframe-box {
+            border: 2px dashed #ccc;
+            padding: 1rem;
+            border-radius: 6px;
+            background: #fff;
+        }
+
+        .wireframe-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 600px) {
+            .wireframe-container {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Local Bite Finder</h1>
+        <div class="subtitle">WDD 231 Individual Website Project Plan</div>
+        <p><strong>Student Name:</strong> Caden Griffin</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Site Name</h2>
+            <p><strong>Name Selected:</strong> Local Bite Finder</p>
+            <p><strong>Reasoning:</strong> This name was chosen because it clearly and memorably communicates the core tool of the website: helping users discover local dining spots based on their immediate cravings and preferences.</p>
+            <p><em>Optional Domain Availability:</em> localbitefinder.org</p>
+        </section>
+
+        <section>
+            <h2>2. Site Purpose</h2>
+            <p>The website is designed to solve dinner and date-night indecision. The site provides a curated directory and interactive filtering tool for local restaurants. Users can select specific cuisine types (such as Mexican, American, or Italian), view star ratings (1–5 stars), check detailed restaurant info via accessible modals, and save their favorite spots using local storage.</p>
+        </section>
+
+        <section>
+            <h2>3. Scenarios</h2>
+            <p>Target audience questions that drive the functionality and content of the website:</p>
+            <ul>
+                <li>"Where can I find a highly-rated Mexican restaurant nearby that I can check out for date night?"</li>
+                <li>"How can I save my favorite restaurant options to a personal list so I can review them later?"</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4 & 5. Color Scheme</h2>
+            <p>The following color palette is used throughout this site plan document and will be applied to the final website:</p>
+            <ul>
+                <li><span class="color-box primary-box"></span><strong>Primary Color (#D9534F - Warm Red/Coral):</strong> Used for primary headings, call-to-action buttons, and key interactive accents.</li>
+                <li><span class="color-box secondary-box"></span><strong>Secondary Color (#F0AD4E - Warm Amber/Gold):</strong> Used for star ratings, subtitles, badges, and highlights.</li>
+                <li><span class="color-box bg-box"></span><strong>Background Color (#F9F9F9 - Off-White):</strong> Used for page body backgrounds to ensure soft, easy-to-read contrast.</li>
+                <li><span class="color-box text-box"></span><strong>Text Color (#333333 - Dark Charcoal):</strong> Used for paragraph text and general body content for high readability.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Typography</h2>
+            <p>The site uses two clean Google Fonts to establish strong readability and modern styling:</p>
+            <ul>
+                <li><strong>Heading Font (Poppins):</strong> Applied to all major headings (&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;) to give a modern, clean, structural feel.</li>
+                <li><strong>Body Font (Inter):</strong> Applied to body text (&lt;body&gt;, &lt;p&gt;, &lt;li&gt;) for optimized legibility across both mobile and desktop screens.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7. Wireframes</h2>
+            <p>Below is the structural layout plan for the home page in both mobile and wider desktop views:</p>
+            
+            <div class="wireframe-container">
+                <div class="wireframe-box">
+                    <h4>Mobile View (320px+)</h4>
+                    <ul>
+                        <li>Header with Logo & Hamburger Menu icon</li>
+                        <li>Hero banner: "Can't Decide What to Eat?"</li>
+                        <li>Interactive craving filter dropdown</li>
+                        <li>Vertical single-column list of restaurant cards (Name, Rating, Cuisine)</li>
+                        <li>Footer with attribution and video link</li>
+                    </ul>
+                </div>
+                <div class="wireframe-box">
+                    <h4>Desktop View (Wide Screen)</h4>
+                    <ul>
+                        <li>Horizontal navigation bar with logo and page links</li>
+                        <li>Large hero banner with search bar input</li>
+                        <li>Side-by-side layout: Filter sidebar on left, 3-column grid of restaurant cards on right</li>
+                        <li>Modal pop-up behavior on card click</li>
+                        <li>Footer with attribution and video link</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Local Bite Finder | Designed for WDD 231</p>
+    </footer>
+
+</body>
+</html>
