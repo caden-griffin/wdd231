@@ -6,6 +6,11 @@
   <title>Salem Chamber of Commerce - Discover</title>
   <meta name="description" content="Discover Salem, Utah - demographics, points of interest, and local attractions with the Salem Chamber of Commerce.">
   <meta name="author" content="Caden Griffin">
+  <meta property="og:title" content="Salem Chamber of Commerce - Discover">
+  <meta property="og:description" content="Discover Salem, Utah - demographics, points of interest, and local attractions with the Salem Chamber of Commerce.">
+  <meta property="og:image" content="https://caden-griffin.github.io/wdd231/chamber/images/logo.webp">
+  <meta property="og:url" content="https://caden-griffin.github.io/wdd231/chamber/discover.html">
+  <link rel="icon" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -17,8 +22,12 @@
 </head>
 <body>
   <header>
-    <img src="images/favicon.png" alt="Salem Chamber Logo">
-    <div>
+        <div class="header-container">
+            <img src="images/flag.jpg" alt="Utah Flag Logo" class="logo">
+            <div class="title-area">
+                <p class="header-site-title">Utah Valley Chamber</p>
+                <span>Community & Commerce</span>
+            </div>
       <span class="chamber-title">Salem Chamber of Commerce</span>
     </div>
     <button id="menu" aria-label="Toggle Navigation Menu"></button>
@@ -34,6 +43,7 @@
   </nav>
 
   <main>
+    <h1>Discover Salem, Utah</h1>
     <div id="visitor-message" class="visitor-sidebar"></div>
     <section class="discover-grid">
     </section>
