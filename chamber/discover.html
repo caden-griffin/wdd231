@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salem Chamber of Commerce - Discover</title>
+  <meta name="description" content="Discover Salem, Utah - demographics, points of interest, and local attractions with the Salem Chamber of Commerce.">
+  <meta name="author" content="Caden Griffin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/medium.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script type="module" src="scripts/discover.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/favicon.png" alt="Salem Chamber Logo">
+    <div>
+      <span class="chamber-title">Salem Chamber of Commerce</span>
+    </div>
+    <button id="menu" aria-label="Toggle Navigation Menu"></button>
+  </header>
+
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html" class="active">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="visitor-message" class="visitor-sidebar"></div>
+    <section class="discover-grid">
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p><strong>Salem Chamber of Commerce</strong></p>
+      <p>200 N Main St, Salem, UT 84653</p>
+      <p>info@salemchamber.org | (801) 555-0199</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentyear">2026</span> Salem Chamber | Caden Griffin | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>
