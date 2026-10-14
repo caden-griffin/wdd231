@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggest a Restaurant - FoodFinder</title>
+  <meta name="description" content="Submit a new restaurant suggestion to the FoodFinder directory.">
+  <meta name="author" content="Caden Griffin">
+  <meta property="og:title" content="Suggest a Restaurant">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+  <meta property="og:url" content="https://caden-griffinio/wdd231/final/add-restaurant.html">
+  <link rel="icon" type="image/fork-and-knife" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <script type="module" src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">FoodFinder</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="add-restaurant.html" class="active">Suggest</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Suggest a Restaurant</h1>
+      <p>Know a great spot? Fill out the form below to submit it.</p>
+    </section>
+
+    <div class="form-container">
+      <form action="action.html" method="GET">
+        <div class="form-group">
+          <label for="name">Restaurant Name</label>
+          <input type="text" id="name" name="Restaurant Name" required>
+        </div>
+        <div class="form-group">
+          <label for="cuisine">Cuisine Type</label>
+          <input type="text" id="cuisine" name="Cuisine" required>
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating (1-5)</label>
+          <input type="number" id="rating" name="Rating" min="1" max="5" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="Address" required>
+        </div>
+        <div class="form-group">
+          <label for="comments">Additional Comments</label>
+          <textarea id="comments" name="Comments" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Suggestion</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 FoodFinder | <a href="attributions.html">Attributions</a> | <a href="https://youtube.com" target="_blank">Video Demonstration</a></p>
+  </footer>
+</body>
+</html>
